@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+
+Route::get('/category','CategoryController@getData');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

@@ -1,1 +1,6 @@
 Categorien zijn bijvoorbeeld: broek, jas, pak, sok, vest
+
+https://www.youtube.com/watch?v=IehVrPkLNjY 
+
+maak database met de tabel "products"
+Als je op Broeken klikt komen er producten van alle broeken met merken etc. 
