@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Shop Homepage - Start Bootstrap Template</title>
+  <title>Shop Homepage</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"; integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,7 +27,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="#">Start</a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,19 +35,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Create
+            <a class="nav-link" href="#">Shopping Cart
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Edit</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Update</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Delete</a>
-          </li>
+       
         </ul>
       </div>
     </div>
@@ -79,13 +73,13 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+              <img class="d-block img-fluid" src="https://d37slghchgusxj.cloudfront.net/hero_banners/images/000/006/771/large/Screen_Shot_2018-04-02_at_12.40.35_PM.jpg?1522698239" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+              <img class="d-block img-fluid" src="https://www.harryrosen.com/medias/sys_master/images/images/hcb/h51/8920168595486/Les-Cours-Store-2.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+              <img class="d-block img-fluid" src="https://d37slghchgusxj.cloudfront.net/hero_banners/images/000/005/936/large/BLANKLABEL-4.jpg?1514500795" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -102,39 +96,42 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="https://mosaic03.ztat.net/vgs/media/article-image-mhq/TP/82/2G/0A/PK/11/TP822G0AP-K11@4.jpg?imwidth=1524" style="max-height:300px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="category">Broeken</a>
+                  <a href="category">Jeans</a>
                 </h4>
-                <h5>$24.99</h5>
+                <h5>$49.99</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
               </div>
+              
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              
+                 <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
               </div>
             </div>
+            
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="https://mosaic03.ztat.net/vgs/media/article-image-mhq/JA/22/2T/0C/BQ/11/JA222T0CB-Q11@12.jpg?imwidth=1524" style="max-height:300px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Jassen</a>
+                  <a href="#">Jacket</a>
                 </h4>
-                <h5>$24.99</h5>
+                <h5>$29.99</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="https://images.express.com/is/image/expressfashion/0039_03251768_0920?cache=on&wid=361&fmt=jpeg&qlt=75,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon" style="max-height:300px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Pakken</a>
@@ -143,39 +140,40 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              
+              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="http://www.makhanlall.com/images/zM9PgeWY0Cuu/adidas-cotton-yeezy-shoes-62BR_3.jpg" style="min-height:250px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Sokken</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Vesten</a>
+                  <a href="#">Schoen</a>
                 </h4>
                 <h5>$24.99</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://www.hatsandcaps.co.uk/images/products/large/203305.jpg" style="max-height:300px" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Cap</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-footer">
+              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
               </div>
             </div>
           </div>
