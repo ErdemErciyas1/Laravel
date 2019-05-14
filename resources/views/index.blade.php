@@ -9,6 +9,7 @@
   <meta name="author" content="">
 
   <title>Shop Homepage</title>
+  
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"; integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,6 +24,8 @@
 </head>
 
 <body>
+
+  
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -39,9 +42,7 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Edit</a>
-       
+          
         </ul>
       </div>
     </div>
@@ -92,17 +93,22 @@
           </a>
         </div>
 
+
+
+        @foreach ($products->chunk(3) as $productChunk)
         <div class="row">
+        @foreach($productChunk as $product)
+       
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://mosaic03.ztat.net/vgs/media/article-image-mhq/TP/82/2G/0A/PK/11/TP822G0AP-K11@4.jpg?imwidth=1524" style="max-height:300px" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ $product->imagePath }}" style="max-height:300px" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="category">Jeans</a>
+                  <a href="category">{{ $product->title }}</a>
                 </h4>
-                <h5>$49.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                <h5>${{ $product->price }}</h5>
+                <p class="card-text">{{ $product->description }}</p>
               </div>
               
               <div class="card-footer">
@@ -112,93 +118,15 @@
             </div>
             
           </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://mosaic03.ztat.net/vgs/media/article-image-mhq/JA/22/2T/0C/BQ/11/JA222T0CB-Q11@12.jpg?imwidth=1524" style="max-height:300px" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Jacket</a>
-                </h4>
-                <h5>$29.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://images.express.com/is/image/expressfashion/0039_03251768_0920?cache=on&wid=361&fmt=jpeg&qlt=75,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon" style="max-height:300px" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Pakken</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-              
-              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://www.makhanlall.com/images/zM9PgeWY0Cuu/adidas-cotton-yeezy-shoes-62BR_3.jpg" style="min-height:250px" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Schoen</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://www.hatsandcaps.co.uk/images/products/large/203305.jpg" style="max-height:300px" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Cap</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-              <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
-              </div>
-            </div>
-          </div>
-
-       
-
-        </div>
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
-
-    </div>
-    <!-- /.row -->
+        @endforeach
+          
+        @endforeach
+        
 
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
