@@ -13,7 +13,7 @@
 
 Route::get('/', [
     'uses' => 'ProductController@getIndex',
-    'as'=>'product.index'
+    
 ]);
 
 
@@ -22,4 +22,4 @@ Route::get('/category','CategoryController@getData');
 Auth::routes();
 
 
-
+Route::get('/home', 'HomeController@index')->name('home');
