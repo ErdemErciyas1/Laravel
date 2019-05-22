@@ -1,12 +1,28 @@
 
-<table>
-    <tr>
-        <td>Id</td>
-        <td>Name</td>
-    </tr>
-    @foreach($data as $value)
-    <tr>
-        <td>{{ $value->id }}</td>
-        <td>{{ $value->name }}</td>
-    </tr>
-    @endforeach 
+@extends('layouts.app')
+
+@section('content')
+
+@foreach ($categories as $category)
+      
+        
+
+        
+            
+              
+              <div class="card-body">
+                <h4 class="card-title">
+                <li><a href="{{ url('category/'.$category['id'])}}">{{$category->name}}</a></li>
+                </h4>
+                
+              </div>
+          
+        @endforeach
+        @endsection
+
+        
+
+
+
+
+     

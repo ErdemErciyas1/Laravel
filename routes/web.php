@@ -13,11 +13,19 @@
 
 Route::get('/', [
     'uses' => 'ProductController@getIndex',
-    
+
+]);
+
+Route::get('/category', [
+'uses' => 'CategoryController@getData',
+
 ]);
 
 
-Route::get('/category','CategoryController@getData');
+Route::get('/AddtoCart/{id}',[
+    'uses' => 'ProductController@getCartInfo',
+
+]);
 
 Auth::routes();
 

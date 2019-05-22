@@ -13,4 +13,9 @@ class ProductController extends Controller
      $products = Product::all();
      return view('index', ['products' => $products]);
     }
+
+    public function getCartInfo(Request $request, $id)
+    {
+        $product = Product::find($id);
+    }
 }

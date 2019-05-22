@@ -1,23 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+
 use Illuminate\Http\Request;
+use App\Category;
+use DB;
 
 class CategoryController extends Controller
 {
-    function getData()
+    public function getData()
     {
-        $data['data'] = DB::table('categories')->get();
-    
-    if(count($data) > 0){
-        return view('category', $data);
-    }
-    else
-    {
-        return view('category');
-    }
-
+        $categories = Category::all();
+        return view('/category', ['categories' => $categories]);
     }
 }
 
