@@ -22,9 +22,9 @@ Route::get('/category', [
 ]);
 
 
-Route::get('/AddtoCart/{id}',[
-    'uses' => 'ProductController@getCartInfo',
-
+Route::get('/cart/add/{id}',[
+    'uses' => 'ProductController@getAddToCart',
+    'as' => 'product.addToCart'
 ]);
 
 Auth::routes();

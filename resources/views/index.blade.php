@@ -102,7 +102,8 @@
               
               <div class="card-footer">
               
-                 <input type="submit" value="Add To Cart" name="addCart" class="btn btn-primary">
+                 <input onclick =location.href="{{ route('product.addToCart', ['id' =>$product->id]) }}" type="submit" value="Add To Cart" name="AddtoCart" class="btn btn-primary">
+                 
               </div>
             </div>
             
