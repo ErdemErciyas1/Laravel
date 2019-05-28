@@ -17,7 +17,7 @@ class ProductController extends Controller
      return view('index', ['products' => $products]);
     }
 
-    public function getAddtoCart(Request $request, $id)
+    public function getAddToCart(Request $request, $id)
     {
         $product = Product::find($id);
         $oldShoppingCart = Session::has('cart') ? Session::get('cart') : null;
@@ -25,8 +25,8 @@ class ProductController extends Controller
         $cart->add($product, $product->id); 
 
         $request->session()->put('cart', $cart);
-        dd($request->session()->get('cart'));
-        return redirect()->route('index');
+        
+        return redirect()->route('product.index');
         
        
     }

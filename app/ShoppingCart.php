@@ -8,7 +8,7 @@ class ShoppingCart
     public $totalQty= 0;
     public $totalPrice = 0;
 
-    public function __contstruct($oldShoppingCart)
+    public function __construct($oldShoppingCart)
     {
         if ($oldShoppingCart) {
             $this ->items = $oldShoppingCart->items;
@@ -18,14 +18,14 @@ class ShoppingCart
     }
 
     public function add($item, $id) {
-        $storedItem = ['quality' => 0, 'price' => $item->price, 'item' =>$item];
+        $storedItem = ['quantity' => 0, 'price' => $item->price, 'item' =>$item];
         if ($this->items) {
             if (array_key_exists($id, $this->items)){
                 $storedItem = $this->items[$id];
             }
         }
-        $storedItem['quality']++;
-        $storedItem['price'] = $item->price * $storedItem['quality'];
+        $storedItem['quantity']++;
+        $storedItem['price'] = $item->price * $storedItem['quantity'];
         $this->items[$id] = $storedItem;
         $this->totalQty++;
         $this->totalPrice += $item->price;
