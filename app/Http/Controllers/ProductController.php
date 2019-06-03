@@ -27,7 +27,16 @@ class ProductController extends Controller
         $request->session()->put('cart', $cart);
         
         return redirect()->route('product.index');
-        
        
+    }
+
+    public function getCart()
+    {
+        if (!Session::has('cart')) {
+            return view('shoppingcart');
+        }
+        $oldShoppingCart = Session::get('cart');
+        $cart = new ShoppingCart($oldShoppingCart);
+        return view('shoppingcart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 }

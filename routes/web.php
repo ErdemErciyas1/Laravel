@@ -28,6 +28,10 @@ Route::get('/cart/add/{id}',[
     'as' => 'product.addToCart'
 ]);
 
+Route::get('/shoppingcart', [
+    'uses' => 'ProductController@getCart',
+    
+]);
 Auth::routes();
 
 
