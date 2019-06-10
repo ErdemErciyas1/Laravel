@@ -29,10 +29,12 @@ Route::get('/cart/add/{id}',[
 ]);
 
 Route::get('/shoppingcart', [
-    'uses' => 'ProductController@getCart',
+    'uses' => 'ShoppingCartController@getCart',
     
 ]);
-Auth::routes();
 
+Route::get('/delete/{id}','ShoppingCartController@delete');
+
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

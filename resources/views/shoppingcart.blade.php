@@ -14,19 +14,20 @@
                             <span class="label label-success">{{ $product['price'] }}</span>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-primary btn-xs dropdown-toggle"
-                                data-toggle="dropdown">Reduce</span></button> 
+                                data-toggle="dropdown">Edit</span></button> 
                                 <ul class="dropdown-menu">
                                 
+                                
 
-                                <input type="number" name="quantity" min="1" max="100">
-  <input type="submit">
-                                    
-                                    
-                                    
+                            <input type="number" name="quantity" min="1" max="100">
+                            <input type="submit">
                                     
                                 </ul>
+                                <td> <a href ="/delete/{{ $product->id }}" ><button>Delete</a></td>      
                             </div>
+                           
                         </li>
+                        
                     @endforeach
                 </ul>
            
