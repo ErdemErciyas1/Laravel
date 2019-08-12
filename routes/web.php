@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
 
 Route::get('/', [
     'uses' => 'ProductController@getIndex',
@@ -23,18 +27,26 @@ Route::get('/category', [
 ]);
 
 
-Route::get('/cart/add/{id}',[
-    'uses' => 'ProductController@getAddToCart',
-    'as' => 'product.addToCart'
-]);
 
-Route::get('/shoppingcart', [
-    'uses' => 'ShoppingCartController@getCart',
-    
-]);
 
-Route::get('/delete/{id}','ShoppingCartController@delete');
+
+
+Route::get('/shoppingcart','CartController@index')->name('cart');
+
+Route::get('/shoppingcart/{product}', 'CartController@store')->name('cart.store');
+
+
+
+
+
+
+
+
+
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+

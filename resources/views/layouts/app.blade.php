@@ -72,7 +72,7 @@
                             <a class="nav-link" href="{{ url('shoppingcart') }}">
                             
                                 <i class="fas fa-shopping-cart">
-                                    <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : ''  }}</span>
+                                    
                                 </i>
                             </a>
                         </li>
