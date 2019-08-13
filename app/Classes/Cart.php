@@ -49,7 +49,29 @@ class Cart
 
     }
 
+    public static function changeAmount($product, $amount)
 
+    {
 
+        $existingSession = session('cart');
 
+        if ($amount >= 1){
+
+            $existingSession[$product->id] = $amount;
+
+            session(['cart' => $existingSession]);
+
+        }
+        else{
+
+            unset($existingSession[$product->id]);
+
+            session(['cart' => $existingSession]);
+
+        }
+
+        return Redirect('/shoppingcart');
+
+    }
+    
 }

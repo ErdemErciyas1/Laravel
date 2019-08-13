@@ -51,6 +51,23 @@
                                 </div>
 
                             </div>
+                            </td>
+
+                        <td data-th="Price">€{{$product[$id]->price}}</td>
+
+                        <td data-th="Quantity">
+
+                            <form method="post" action="{{route('cart.update', ['id' => $id])}}">
+
+                                @csrf
+
+                                <input type="number" class="form-control text-center" name='quantity' value="{{$amount}}">
+
+                                <input class="btn btn-info btn-sm" step="1" type="submit" value="submit">
+
+                            </form>
+
+                        </td>
 
                         </td>
 

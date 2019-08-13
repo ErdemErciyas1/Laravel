@@ -21,7 +21,14 @@ class CartController extends Controller {
     { 
         return Cart::add($product);
     }
+    
+    public function update(Request $request, Product $product)
+    {
+        $amount = $request->input('quantity');
 
+    return Cart::changeAmount($product,$amount);
+
+    }
 
 }
     

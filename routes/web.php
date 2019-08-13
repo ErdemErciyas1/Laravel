@@ -35,6 +35,8 @@ Route::get('/shoppingcart','CartController@index')->name('cart');
 
 Route::get('/shoppingcart/{product}', 'CartController@store')->name('cart.store');
 
+Route::post('/shoppingcart/{product}', 'CartController@update')->name('cart.update');
+
 
 
 
