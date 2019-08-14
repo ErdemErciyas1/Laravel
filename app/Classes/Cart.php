@@ -73,5 +73,24 @@ class Cart
         return Redirect('/shoppingcart');
 
     }
+
+    public static function deleteSession($product)
+
+    {
+
+      
+        $currentSession = session('cart');
+
+        unset($currentSession[$product->id]);
+
+        session(['cart' => $currentSession]);
+
+        return redirect('/shoppingcart');
+      
+     
+
+    }
+
+
     
 }

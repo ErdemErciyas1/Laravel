@@ -37,6 +37,8 @@ Route::get('/shoppingcart/{product}', 'CartController@store')->name('cart.store'
 
 Route::post('/shoppingcart/{product}', 'CartController@update')->name('cart.update');
 
+Route::delete('/shoppingcart/{product}', 'CartController@delete')->name('cart.delete');
+
 
 
 

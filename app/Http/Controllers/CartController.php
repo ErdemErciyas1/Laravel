@@ -30,5 +30,13 @@ class CartController extends Controller {
 
     }
 
+    public function delete(Product $product)
+
+    {
+
+       return Cart::deleteSession($product);
+
+    }  
+
 }
     
