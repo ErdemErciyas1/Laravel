@@ -103,7 +103,7 @@
               <div class="card-footer">
               
                  
-              <a href="{{route('cart.store', ['id' => $product->id])}}"><button type="button" class="btn btn-primary">add to cart</button></a>
+              <a href="{{route('cart.create', ['id' => $product->id])}}"><button type="button" class="btn btn-primary">add to cart</button></a>
               </div>
             </div>
             

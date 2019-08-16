@@ -17,7 +17,7 @@ class CartController extends Controller {
         return view('shoppingcart', ['cart' => session('cart'), 'product' => product::all()]);
     }
 
-    public function store(Product $product)
+    public function create(Product $product)
     { 
         return Cart::add($product);
     }
@@ -26,7 +26,7 @@ class CartController extends Controller {
     {
         $amount = $request->input('quantity');
 
-    return Cart::changeAmount($product,$amount);
+        return Cart::changeAmount($product,$amount);
 
     }
 

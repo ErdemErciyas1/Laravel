@@ -27,26 +27,13 @@ Route::get('/category', [
 ]);
 
 
-
-
-
-
 Route::get('/shoppingcart','CartController@index')->name('cart');
 
-Route::get('/shoppingcart/{product}', 'CartController@store')->name('cart.store');
+Route::get('/shoppingcart/{product}', 'CartController@create')->name('cart.create');
 
 Route::post('/shoppingcart/{product}', 'CartController@update')->name('cart.update');
 
 Route::delete('/shoppingcart/{product}', 'CartController@delete')->name('cart.delete');
-
-
-
-
-
-
-
-
-
 
 
 Auth::routes();

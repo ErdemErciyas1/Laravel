@@ -8,7 +8,6 @@ class Cart
 {
     public static function add($product)
   
-
     {
 
         $existingCart = session('cart');
@@ -75,19 +74,14 @@ class Cart
     }
 
     public static function deleteSession($product)
+    {     
+        $existingSession = session('cart');
 
-    {
+        unset($existingSession[$product->id]);
 
-      
-        $currentSession = session('cart');
+        session(['cart' => $existingSession]);
 
-        unset($currentSession[$product->id]);
-
-        session(['cart' => $currentSession]);
-
-        return redirect('/shoppingcart');
-      
-     
+        return redirect('/shoppingcart');   
 
     }
 
